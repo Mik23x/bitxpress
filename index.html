@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiteExpress</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <header>
+        <div class="logo">BiteExpress</div>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                <li><a href="#menu" onclick="showSection('menu')">Menu</a></li>
+                <li><a href="#order" onclick="showSection('order')">Order Online</a></li>
+                <li><a href="#about" onclick="showSection('about')">About Us</a></li>
+                <li><a href="#contact" onclick="showSection('contact')">Contact Us</a></li>
+               
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="content-section">
+        <h1>Welcome to BiteExpress</h1>
+        <p>Delicious food delivered straight to your doorstep.</p>
+        <div class="cta-buttons">
+            <button onclick="orderNow()">Order Now</button>
+            <button onclick="exploreMenu()">Explore Menu</button>
+        </div>
+    </section>
+
+    <section id="menu" class="content-section" style="display: none;">
+        <h2>Our Menu</h2>
+        <p>Explore our wide selection of delicious dishes.</p>
+    </section>
+
+    <section id="order" class="content-section" style="display: none;">
+        <h2>Order Online</h2>
+        <p>Choose your favorite meals and place your order with ease.</p>
+    </section>
+
+    <section id="about" class="content-section" style="display: none;">
+        <h2>About Us</h2>
+        <p>BiteExpress is dedicated to providing the best food delivery service.</p>
+    </section>
+
+    <section id="contact" class="content-section" style="display: none;">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <script>
+    function showSection(sectionId) {
+        let sections = document.querySelectorAll(".content-section");
+        sections.forEach(section => section.style.display = "none");
+        document.getElementById(sectionId).style.display = "block";
+    }
+
+    function orderNow() {
+        alert("Redirecting to Order Page...");
+    }
+
+    function exploreMenu() {
+        alert("Exploring Menu...");
+    }
+
+    </script>
+</body>
+</html>
